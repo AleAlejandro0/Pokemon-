@@ -1,0 +1,248 @@
+.pokedex{
+ padding: 1rem;
+ margin-top: 4rem;
+}
+.pokedex__square{
+ height: 65px;
+ background-color: black;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.pokedex__pokeLogo{
+ width: 150px;
+ padding-left: 1rem;
+}
+.pokedex__title{
+ font-family: var(--Main-font);
+ font-size: 25PX;
+ text-align: center;
+}
+.pokedex__pokemon{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 2rem;
+}
+
+/* POKECARD COMPONENT STYLES */
+
+.pokeCard{   
+ width: 350px;
+ padding: 15px;
+ border-radius: 2%;
+ transition: transform 200ms ease;
+}
+.pokeCard:hover{
+ cursor: pointer;
+}
+.pokeCard:hover{
+ transform: scale(1.05);
+}
+.pokeCard__header{
+ display: flex;
+ justify-content: center;
+ position: relative;
+ height: 150px;
+}
+.pokeCard__img{
+ width: 200px;
+ position: absolute;
+ transition: transform 200ms ease;
+}
+.pokeCard__img:hover{
+ transform: scale(1.10);
+}
+.pokeCard__section{
+ padding: 10px;
+ background-image: radial-gradient(at 20px 20px, rgb(255, 255, 255) 60%, rgb(145, 133, 133)) 
+}
+.pokeCard__name{
+ text-align: center;
+ font-size: 30px;
+ font-family: var(--Main-font);
+ margin-top: 2rem;
+}
+.pokeCard__type{
+ list-style: none;
+ text-align: center;
+ padding-left: 0;
+ font-family: var(--Second-font);
+ font-size: 18px;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 1rem;
+ margin-top: 0;
+}
+.pokeCard__powers{
+ list-style: none;
+ padding-left: 0;
+ display: grid;
+ grid-template-columns: 1fr 1fr
+}
+.powers__title{
+ text-align: center;
+ font-family: var(--Main-font);
+ font-size: 17px;
+}
+.powers__number{
+ text-align: center;
+ font-weight: 600;
+ color: #000;
+}
+
+/* PAGINATION STYLE */ 
+
+.pagination{
+ margin-top: 1.5rem;
+ width: 80%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-left: 10%;
+ overscroll-behavior-inline: contain;
+}
+.pagination__list{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: .5rem;
+ list-style: none;
+ padding: 0;
+}
+.pagination__item{
+ font-size: 25px;
+ font-family: var(--Main-font);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 38px;
+ width: 38px;
+ border-radius: 50%;
+ background-color: black;
+ color: white;
+ border: 1px solid transparent; 
+}
+.active{
+ cursor: pointer;
+ background-color: white;
+ color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 38px;
+ width: 38px;
+ border-radius: 50%;  
+}
+.pagination__item:hover{
+ cursor: pointer;
+ background-color: white;
+ color: black;
+ transition: 300ms ease;
+ border: 1px solid black;
+}
+.pagination__btn1{
+ border: none;
+ font-size: 20px;
+ cursor: pointer;
+ color: black;
+ background-color: transparent;
+ transition: transform 200ms ease;
+}
+.pagination__btn1:hover{
+ transform: scale(1.3);
+}
+.pagination__btn2{
+ border: none;
+ font-size: 20px;
+ cursor: pointer;
+ color: black;
+ background-color: transparent;
+ transition: transform 200ms ease;
+}
+.pagination__btn2:hover{
+ transform: scale(1.3);
+}
+
+/* STYLE SEARCH-POKE COMPONENT*/
+
+.form__container{
+ display: flex;
+ justify-content: center;
+}
+.form{
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ right: 5rem;
+ margin-top: 2rem;
+ margin-bottom: 1rem;
+ background: rgb(0, 0, 0);
+ height: 15px;
+ border-radius: 40px;
+ padding: 1rem;
+ width: 220PX;
+ box-shadow: 10px 8px 15px rgb(199, 192, 192);
+}
+.form__input{
+ border: none;
+ background: none;
+ outline: none;
+ width: 170px;
+ color: white;
+ font-size: 15px;
+ font-family: var(--Second-font);
+}
+.form__btn{
+ width: 35px;
+ height: 35px;
+ border-radius: 50%;
+ border: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgb(255, 255, 255);
+ cursor: pointer;
+ transition: transform 200ms ease;
+}
+.form__btn:hover{
+ transform: scale(1.10);
+}
+
+/* SELECT POKEMON TYPE MENU STYLE */ 
+
+.select__container{
+ display: flex;
+ justify-content: center;
+}
+.select{
+ margin-bottom: 1rem;
+ border: none;
+ padding: 10px;
+ font-family: var(--Second-font);
+ color: white;
+ background-color: #000;
+ text-align: center;
+ box-shadow: 5px 5px 8px rgb(199, 192, 192);
+}
+
+/* RESPONSIVE STYLE SECTION POKEDEX COMPONENT*/ 
+
+@media(min-width: 1000px){
+ .pokedex__title{
+  font-size: 30PX;
+ }
+}
+@media(min-width: 800px){
+ .form__container{
+  justify-content: right;
+  margin-right: 2rem;
+ }
+ .select__container{
+  display: flex;
+  justify-content: right;
+  margin-right: 2rem;
+ }
+}
